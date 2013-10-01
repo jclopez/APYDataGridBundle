@@ -460,7 +460,7 @@ class Entity extends Source
             $countQuery->setHint(ORMCountWalker::HINT_DISTINCT, true);
         }
 
-        $countQuery->setHint(Query::HINT_CUSTOM_TREE_WALKERS, array('APY\DataGridBundle\Grid\Helper\ORMCountWalker'));
+        $countQuery->setHint(Query::HINT_CUSTOM_TREE_WALKERS, array('Doctrine\ORM\Tools\Pagination\CountWalker'));
         $countQuery->setFirstResult(null)->setMaxResults($maxResults);
 
         try {
